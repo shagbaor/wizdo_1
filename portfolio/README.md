@@ -14,14 +14,20 @@ Open `index.html` in a browser, or serve the folder:
 npx serve portfolio
 ```
 
-## Personalise
+## Contacts
 
-Search `index.html` for these placeholders and replace them:
-- `t.me/wizdo`: Telegram (still a placeholder)
-- `x.com/wizdo_1`: X profile, also used by each "Proof of Work" card link
-- `Wizdo002@gmail.com`: email
+- Telegram: https://t.me/Wizdo_1
+- X: https://x.com/wizdo_1
+- Email: Wizdo002@gmail.com
 
-Brand assets live in `assets/`: `logo.svg` (favicon/logo), PNG icons, and the
-portrait (`wizdo.webp` with `wizdo.jpg` fallback).
+## Assets
+
+- `assets/wizdo.webp` / `wizdo.jpg`: hero portrait
+- `assets/avatar-96.webp`, `favicon-*.png`, `apple-touch-icon.png`, `icon-*.png`: logo and browser icons (from the portrait)
+- `assets/logos/`: Proof of Work company logos. `antarctic.svg` and `sumex.svg` are
+  placeholders. Replace them with the official logos, keeping the same file names
+  (or update the `src` in `index.html` if you use PNG).
+
+Icons are an inline SVG sprite at the top of `index.html` (`<symbol id="i-...">`).
 
 The site respects `prefers-reduced-motion` and `prefers-reduced-transparency`.

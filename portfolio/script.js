@@ -100,35 +100,36 @@
   });
   addEventListener("resize", () => movePill(current));
 
-  /* ---------- Mobile sheet ---------- */
-  const burger = $(".burger"), sheet = $("#sheet");
-  const setSheet = (open) => {
+  /* ---------- Mobile menu (circular reveal from the burger) ---------- */
+  const burger = $(".burger"), menu = $("#menu");
+  const setMenu = (open) => {
+    const r = burger.getBoundingClientRect();
+    menu.style.setProperty("--ox", r.left + r.width / 2 + "px");
+    menu.style.setProperty("--oy", r.top + r.height / 2 + "px");
     burger.setAttribute("aria-expanded", open);
     burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-    sheet.classList.toggle("open", open);
-    sheet.setAttribute("aria-hidden", !open);
+    menu.classList.toggle("open", open);
+    menu.setAttribute("aria-hidden", !open);
     document.body.classList.toggle("locked", open);
+    document.body.classList.toggle("menu-open", open);
     navWrap.classList.remove("hide");
   };
-  burger.addEventListener("click", () => setSheet(burger.getAttribute("aria-expanded") !== "true"));
-  sheet.addEventListener("click", (e) => { if (e.target === sheet || e.target.closest("a")) setSheet(false); });
-  addEventListener("keydown", (e) => { if (e.key === "Escape") setSheet(false); });
-  matchMedia("(min-width: 861px)").addEventListener("change", (m) => m.matches && setSheet(false));
-
-  /* ---------- Toast + copy email ---------- */
-  const toast = $(".toast");
-  let toastT;
-  const showToast = (msg) => {
-    toast.textContent = msg;
-    toast.classList.add("show");
-    clearTimeout(toastT);
-    toastT = setTimeout(() => toast.classList.remove("show"), 2200);
-  };
-  $$("[data-copy]").forEach((b) => b.addEventListener("click", async () => {
-    const v = b.dataset.copy;
-    try { await navigator.clipboard.writeText(v); showToast("✓ Email copied to clipboard"); }
-    catch { location.href = "mailto:" + v; }
-  }));
+  burger.addEventListener("click", () => setMenu(burger.getAttribute("aria-expanded") !== "true"));
+  menu.addEventListener("click", (e) => {
+    const a = e.target.closest("a");
+    if (!a) return;
+    const href = a.getAttribute("href");
+    if (href && href.startsWith("#")) {
+      e.preventDefault();
+      setMenu(false);
+      // wait for the overlay to start closing, then scroll
+      setTimeout(() => $(href)?.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" }), 250);
+    } else {
+      setMenu(false);
+    }
+  });
+  addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
+  matchMedia("(min-width: 861px)").addEventListener("change", (m) => m.matches && setMenu(false));
 
   if (reduceMotion) return;
 
