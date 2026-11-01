@@ -12,7 +12,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23a78bfa'/><stop offset='1' stop-color='%2322d3ee'/></linearGradient></defs><rect width='64' height='64' rx='16' fill='url(%23g)'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='800' font-size='34' fill='white'>W</text></svg>" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta property="og:image" content="assets/wizdo.jpg" />
+  <link rel="preload" as="image" href="assets/wizdo.webp" type="image/webp" />
 </head>
 <body>
   <!-- Ambient animated background -->
@@ -36,7 +41,7 @@
   <header class="nav-wrap">
     <nav class="nav glass" aria-label="Primary">
       <a href="#home" class="brand" aria-label="Wizdo home">
-        <span class="brand-dot"></span>WIZDO<span class="brand-tld">_XYZ</span>
+        <img class="brand-logo" src="assets/logo.svg" alt="" width="28" height="28" />Wizdo<span class="brand-tld">_1</span>
       </a>
       <ul class="nav-links">
         <li><a href="#about" data-link>About</a></li>
@@ -73,7 +78,7 @@
       <div class="container hero-inner">
         <div class="hero-copy">
           <div class="status glass reveal">
-            <span class="pulse"></span> Official Web3 Profile · <span class="status-handle">@wizdo</span>
+            <span class="pulse"></span> Official Web3 Profile · <span class="status-handle">@wizdo_1</span>
           </div>
 
           <h1 class="hero-title">
@@ -109,10 +114,13 @@
               <span class="id-no">No. 05 · OFFICIAL</span>
             </div>
             <div class="id-avatar" aria-hidden="true">
-              <span>W</span>
+              <picture>
+                <source srcset="assets/wizdo.webp" type="image/webp" />
+                <img src="assets/wizdo.jpg" alt="Wizdo_1 portrait" width="480" height="480" decoding="async" fetchpriority="high" />
+              </picture>
               <svg class="id-ring" viewBox="0 0 120 120"><circle cx="60" cy="60" r="56"/></svg>
             </div>
-            <div class="id-name">“WIZDO_XYZ”</div>
+            <div class="id-name">“Wizdo_1”</div>
             <div class="id-role">Web3 Growth Strategist</div>
             <ul class="id-tags">
               <li>Web3</li><li>Growth</li><li>Content</li><li>Community</li><li>Creator-Led</li>
@@ -189,11 +197,11 @@
             <div class="eyebrow reveal">02 · Proof of Work</div>
             <h2 class="section-title reveal">Campaigns, creator programs <span class="serif">&amp; research.</span></h2>
           </div>
-          <p class="muted reveal head-note">Published on <a href="https://x.com/wizdo" target="_blank" rel="noopener" class="inline-link">@wizdo</a> on X.</p>
+          <p class="muted reveal head-note">Published on <a href="https://x.com/wizdo_1" target="_blank" rel="noopener" class="inline-link">@wizdo_1</a> on X.</p>
         </div>
 
         <div class="projects">
-          <a class="project glass tilt reveal" href="https://x.com/wizdo" target="_blank" rel="noopener" style="--h1:262;--h2:200">
+          <a class="project glass tilt reveal" href="https://x.com/wizdo_1" target="_blank" rel="noopener" style="--h1:262;--h2:200">
             <div class="project-media"><span class="project-mono">KT</span><div class="project-orb"></div></div>
             <div class="project-body">
               <div class="tags"><span>Campaign</span><span>Trading</span></div>
@@ -201,7 +209,7 @@
               <span class="link-arrow">View on X <span>↗</span></span>
             </div>
           </a>
-          <a class="project glass tilt reveal" href="https://x.com/wizdo" target="_blank" rel="noopener" style="--d:.06s;--h1:160;--h2:210">
+          <a class="project glass tilt reveal" href="https://x.com/wizdo_1" target="_blank" rel="noopener" style="--d:.06s;--h1:160;--h2:210">
             <div class="project-media"><span class="project-mono">SL</span><div class="project-orb"></div></div>
             <div class="project-body">
               <div class="tags"><span>Research</span><span>Thread</span></div>
@@ -209,7 +217,7 @@
               <span class="link-arrow">View on X <span>↗</span></span>
             </div>
           </a>
-          <a class="project glass tilt reveal" href="https://x.com/wizdo" target="_blank" rel="noopener" style="--d:.12s;--h1:320;--h2:20">
+          <a class="project glass tilt reveal" href="https://x.com/wizdo_1" target="_blank" rel="noopener" style="--d:.12s;--h1:320;--h2:20">
             <div class="project-media"><span class="project-mono">VV</span><div class="project-orb"></div></div>
             <div class="project-body">
               <div class="tags"><span>Creator</span><span>Launch</span></div>
@@ -217,7 +225,7 @@
               <span class="link-arrow">View on X <span>↗</span></span>
             </div>
           </a>
-          <a class="project glass tilt reveal" href="https://x.com/wizdo" target="_blank" rel="noopener" style="--h1:30;--h2:300">
+          <a class="project glass tilt reveal" href="https://x.com/wizdo_1" target="_blank" rel="noopener" style="--h1:30;--h2:300">
             <div class="project-media"><span class="project-mono">AK</span><div class="project-orb"></div></div>
             <div class="project-body">
               <div class="tags"><span>Campaign</span><span>Community</span></div>
@@ -225,7 +233,7 @@
               <span class="link-arrow">View on X <span>↗</span></span>
             </div>
           </a>
-          <a class="project glass tilt reveal" href="https://x.com/wizdo" target="_blank" rel="noopener" style="--d:.06s;--h1:190;--h2:250">
+          <a class="project glass tilt reveal" href="https://x.com/wizdo_1" target="_blank" rel="noopener" style="--d:.06s;--h1:190;--h2:250">
             <div class="project-media"><span class="project-mono">CW</span><div class="project-orb"></div></div>
             <div class="project-body">
               <div class="tags"><span>Creator Program</span></div>
@@ -233,7 +241,7 @@
               <span class="link-arrow">View on X <span>↗</span></span>
             </div>
           </a>
-          <a class="project glass tilt reveal" href="https://x.com/wizdo" target="_blank" rel="noopener" style="--d:.12s;--h1:45;--h2:60">
+          <a class="project glass tilt reveal" href="https://x.com/wizdo_1" target="_blank" rel="noopener" style="--d:.12s;--h1:45;--h2:60">
             <div class="project-media"><span class="project-mono">BN</span><div class="project-orb"></div></div>
             <div class="project-body">
               <div class="tags"><span>Ecosystem</span><span>Breakdown</span></div>
@@ -326,7 +334,7 @@
           <blockquote>The strongest Web3 ecosystems are built through <span class="gradient-text">trust, consistency</span> and meaningful community participation.</blockquote>
           <figcaption>
             <p>I help projects build authentic engagement through useful content, strategic storytelling and creator-focused ecosystem growth.</p>
-            <span class="sig">WIZDO_XYZ</span>
+            <span class="sig">WIZDO_1</span>
           </figcaption>
         </figure>
       </div>
@@ -372,16 +380,16 @@
               <span class="cl-text"><small>Telegram</small><b>t.me/wizdo</b></span>
               <span class="cl-arrow">↗</span>
             </a>
-            <a href="https://x.com/wizdo" target="_blank" rel="noopener" class="contact-link glass magnetic">
+            <a href="https://x.com/wizdo_1" target="_blank" rel="noopener" class="contact-link glass magnetic">
               <span class="cl-ico">𝕏</span>
-              <span class="cl-text"><small>Twitter / X</small><b>x.com/wizdo</b></span>
+              <span class="cl-text"><small>Twitter / X</small><b>x.com/wizdo_1</b></span>
               <span class="cl-arrow">↗</span>
             </a>
-            <button type="button" class="contact-link glass magnetic" data-copy="hello@wizdo.xyz">
+            <a href="mailto:Wizdo002@gmail.com" class="contact-link glass magnetic">
               <span class="cl-ico">✦</span>
-              <span class="cl-text"><small>Email · tap to copy</small><b>hello@wizdo.xyz</b></span>
-              <span class="cl-arrow">⧉</span>
-            </button>
+              <span class="cl-text"><small>Email</small><b>Wizdo002@gmail.com</b></span>
+              <span class="cl-arrow">↗</span>
+            </a>
           </div>
         </div>
       </div>
@@ -391,7 +399,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div>
-        <div class="footer-brand">Run by WIZDO_XYZ · Web3 Growth Strategist</div>
+        <div class="footer-brand">Run by Wizdo_1 · Web3 Growth Strategist</div>
         <small class="muted">© <span id="year"></span> · No demons were harmed in the making of this site.</small>
       </div>
       <a href="#home" class="to-top glass magnetic" aria-label="Back to top">

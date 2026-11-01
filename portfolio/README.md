@@ -17,8 +17,11 @@ npx serve portfolio
 ## Personalise
 
 Search `index.html` for these placeholders and replace them:
-- `t.me/wizdo`: Telegram
-- `x.com/wizdo` / `@wizdo`: X profile, and each "Proof of Work" card link
-- `hello@wizdo.xyz`: email
+- `t.me/wizdo`: Telegram (still a placeholder)
+- `x.com/wizdo_1`: X profile, also used by each "Proof of Work" card link
+- `Wizdo002@gmail.com`: email
+
+Brand assets live in `assets/`: `logo.svg` (favicon/logo), PNG icons, and the
+portrait (`wizdo.webp` with `wizdo.jpg` fallback).
 
 The site respects `prefers-reduced-motion` and `prefers-reduced-transparency`.
