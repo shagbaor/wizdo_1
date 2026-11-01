@@ -24,9 +24,7 @@ npx serve portfolio
 
 - `assets/wizdo.webp` / `wizdo.jpg`: hero portrait
 - `assets/avatar-96.webp`, `favicon-*.png`, `apple-touch-icon.png`, `icon-*.png`: logo and browser icons (from the portrait)
-- `assets/logos/`: Proof of Work company logos. `duelbits.svg` is a
-  placeholder. Replace them with the official logos, keeping the same file names
-  (or update the `src` in `index.html` if you use PNG).
+- `assets/logos/`: official Proof of Work company logos (WebP with PNG fallback).
 
 Icons are an inline SVG sprite at the top of `index.html` (`<symbol id="i-...">`).
 
