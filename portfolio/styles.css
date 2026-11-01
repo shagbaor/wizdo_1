@@ -341,6 +341,7 @@ body.loaded .loader { opacity: 0; visibility: hidden; }
    ========================================================= */
 .hero {
   position: relative;
+  overflow-x: clip;
   min-height: 100vh; min-height: 100svh;
   display: flex; align-items: center;
   padding: calc(var(--nav-h) + 72px) 0 96px;
@@ -489,8 +490,9 @@ body.loaded .hero-title .line:nth-child(2) .word:nth-child(2) { transition-delay
 .chip-ico .icon { width: 14px; height: 14px; stroke-width: 2; }
 .float { animation: float 6s ease-in-out infinite; }
 .f1 { top: -4%; left: -4%; }
-.f2 { top: 46%; right: -8%; animation-delay: -2s; }
-.f3 { bottom: -5%; left: -2%; animation-delay: -4s; }
+.f2 { top: 34%; right: -7%; animation-delay: -2s; }
+.f4 { top: -4%; right: -6%; animation-delay: -3s; }
+.f3 { bottom: -10%; left: -2%; animation-delay: -4s; }
 @keyframes float { 50% { transform: translateY(-14px) rotate(-1.5deg); } }
 
 .scroll-hint { position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%); opacity: .6; transition: opacity .3s; }
@@ -887,6 +889,9 @@ body.menu-open .nav-wrap .nav { background: rgba(255,255,255,.06); }
 @media (max-width: 1024px) {
   .nav-links a { padding: 8px 10px; }
   .hero-inner { grid-template-columns: 1fr; gap: 64px; }
+  .hero-visual { width: 100%; max-width: 500px; margin-inline: auto; }
+  .f2 { right: -2%; }
+  .f4 { right: -2%; }
   .hero-copy { text-align: left; }
   .projects, .services { grid-template-columns: repeat(2, 1fr); }
   .contact-links { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; }
@@ -916,7 +921,8 @@ body.menu-open .nav-wrap .nav { background: rgba(255,255,255,.06); }
   .hero-actions .btn { width: 100%; justify-content: center; min-height: 52px; }
   .hero-visual { padding: 0 6px; }
   .f1 { left: auto; right: -2%; top: -22px; }
-  .f2 { right: auto; left: -2%; top: 40%; }
+  .f2 { right: auto; top: auto; left: -2%; bottom: -22px; }
+  .f4 { right: auto; left: -2%; top: -22px; }
   .f3 { left: auto; right: 0; bottom: -22px; }
   .chip { font-size: 12px; padding: 8px 12px; }
   .chip-ico { width: 22px; height: 22px; }
